@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import logo from "./assets/twine-logo.png";
+import Requirements from "./components/Requirements";
+
+// import HRIS from "./answers/HRIS";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ maxWidth: 1200, margin: "auto", height: "100%", padding: 64 }}>
+      <img src={logo} style={{ width: 64, height: "auto" }} alt="twine-awesome-logo" />
+      <h1>Twine Frontend technical test</h1>
+
+      <section style={{ padding: 24, backgroundColor: "ghostwhite", marginBottom: 64 }}>
+        <h1>Answers</h1>
+
+        <h3 style={{ border: "1px solid blue" }}>My awesome component</h3>
+      </section>
+
+      <div style={{ height: "1px", backgroundColor: "lightgrey", marginBottom: 24 }} />
+      <section>
+        <Requirements />
+      </section>
     </div>
   );
-}
+};
 
 export default App;
